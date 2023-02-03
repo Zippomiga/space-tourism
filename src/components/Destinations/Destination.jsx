@@ -5,6 +5,10 @@ import Illustration from '../Illustrations/Illustration'
 import JSON from '../../data.json'
 import NavTabs from '../NavTabs/NavTabs'
 import { useState } from 'react'
+import Moon from '../../assets/destination/image-Moon.webp'
+import Mars from '../../assets/destination/image-Mars.webp'
+import Europa from '../../assets/destination/image-Europa.webp'
+import Titan from '../../assets/destination/image-Titan.webp'
 
 
 export default function Destination() {
@@ -13,6 +17,8 @@ export default function Destination() {
   const data = JSON['01 Destination'][1]
   const tabs = data.map(tab => tab.name)
   const { name, description, travel, distance } = data[destiny]
+
+  const src = [Moon, Mars, Europa, Titan]
 
   return (
     <section className='destination'>
@@ -37,7 +43,7 @@ export default function Destination() {
       </aside>
       <Illustration
         classImg='destination-img'
-        src={`../src/assets/destination/image-${name}.webp`}
+        src={src[destiny]}
         alt={name}
       />
     </section>
