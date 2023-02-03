@@ -1,0 +1,112 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.header-tab {
+  border-bottom: 3px solid transparent;
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+.header-tab:hover {
+  border-bottom: 3px solid var(--gray);
+}
+
+.header-tab span {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.destination-tab {
+  border-bottom: 3px solid transparent;
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.destination-tab:hover {
+  border-bottom: 3px solid var(--gray);
+}
+
+.crew-tab {
+  background: var(--gray);
+  border-radius: 50%;
+  font-size: 0;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+.crew-tab:hover {
+  background: var(--white);
+}
+
+.technology-tab {
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+  color: var(--white);
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.technology-tab:hover {
+  background: var(--white);
+  color: var(--darkblue);
+}
+
+.active-H-D {
+  border-bottom: 3px solid var(--white);
+}
+
+.active-C-T {
+  color: var(--darkblue);
+  background: var(--white);
+}
+
+
+@media screen and (max-width: 768px) {
+  .header-tab span {
+    display: none;
+  }
+
+  .technology-tab {
+    height: 3.6rem;
+    width: 3.6rem;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .header-tab span {
+    display: initial;
+  }
+
+  .header-tab {
+    display: block;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    padding: 0.7rem 0;
+  }
+
+  .destination-tab {
+    color: var(--lightblue);
+    padding: 0.8rem 0;
+  }
+
+  .crew-tab {
+    height: 0.7rem;
+    width: 0.7rem;  
+  }
+
+  .technology-tab {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

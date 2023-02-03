@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --barlow: 'Barlow', sans-serif;
+  --barlow-condesed: 'Barlow Condensed', sans-serif;
+  --bellefair: 'Bellefair', serif;
+  --desktop-min-height: 900px;
+  --tablet-min-height: 1024px;
+  --mobile-min-height: 667px;
+  --bg-gray: #ffffff0d;
+  --darkblue: #0b0d17;
+  --gray: #979797;
+  --lightblue: #d0d6f9;
+  --white: #fff;
+}
+
+
+.bg-home {
+  background: url(./assets/home/background-home-desktop.jpg);
+}
+
+.bg-destination {
+  background: url(./assets/destination/background-destination-desktop.jpg);
+}
+
+.bg-crew {
+  background: url(./assets/crew/background-crew-desktop.jpg);
+}
+
+.bg-technology {
+  background: url(./assets/technology/background-technology-desktop.jpg);
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 4rem 0;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-home {
+    background: url(./assets/home/background-home-tablet.jpg);
+  }
+
+  .bg-destination {
+    background: url(./assets/destination/background-destination-tablet.jpg);
+  }
+
+  .bg-crew {
+    background: url(./assets/crew/background-crew-tablet.jpg);
+  }
+
+  .bg-technology {
+    background: url(./assets/technology/background-technology-tablet.jpg);
+  }
+
+  .bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 2rem 0;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .bg-home {
+    background: url(./assets/home/background-home-mobile.jpg);
+  }
+
+  .bg-destination {
+    background: url(./assets/destination/background-destination-mobile.jpg);
+  }
+
+  .bg-crew {
+    background: url(./assets/crew/background-crew-mobile.jpg);
+  }
+
+  .bg-technology {
+    background: url(./assets/technology/background-technology-mobile.jpg);
+  }
+
+  .bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+  }
+}

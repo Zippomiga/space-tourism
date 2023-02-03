@@ -1,0 +1,45 @@
+.footer-distance-time {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 75%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  justify-content: space-between;
+}
+
+.footer-info span {
+  color: var(--lightblue);
+  font-family: var(--barlow-condesed);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.footer-info strong {
+  color: var(--white);
+  font-family: var(--bellefair);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer-distance-time {
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .footer-distance-time {
+    flex-direction: column;
+    gap: 1.5rem 0;
+    width: 100%;
+  }
+}

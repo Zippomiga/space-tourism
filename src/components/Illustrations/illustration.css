@@ -1,0 +1,42 @@
+.destination-img {
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  width: 40%;
+}
+
+.crew-img {
+  border-bottom: 1px solid var(--gray);
+  height: 75vh;
+  object-fit: contain;
+  object-position: bottom;
+  width: 40%;
+}
+
+.technology-img {
+  height: auto;
+  object-fit: contain;
+}
+
+
+@media screen and (max-width: 768px) {
+  .destination-img {
+    width: 60%;
+  }
+
+  .crew-img {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .technology-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .crew-img {
+    border-bottom: 1px solid var(--gray);
+    height: 40vh;
+  }
+}

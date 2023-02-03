@@ -1,0 +1,35 @@
+.subtitle {
+  color: var(--white);
+  font-family: var(--barlow-condesed);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  padding: 0 7rem;
+  text-transform: uppercase;
+}
+
+.number {
+  color: var(--gray);
+  font-weight: 700;
+  margin-right: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .subtitle {
+    font-size: 1.3rem;
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .subtitle {
+    font-size: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .number {
+    margin-right: 1rem;
+  }
+}
