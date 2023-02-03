@@ -4,11 +4,8 @@ import Footer from './Footer'
 import Illustration from '../Illustrations/Illustration'
 import JSON from '../../data.json'
 import NavTabs from '../NavTabs/NavTabs'
+import { SRC } from '../../sources'
 import { useState } from 'react'
-import Moon from '../../assets/destination/image-Moon.webp'
-import Mars from '../../assets/destination/image-Mars.webp'
-import Europa from '../../assets/destination/image-Europa.webp'
-import Titan from '../../assets/destination/image-Titan.webp'
 
 
 export default function Destination() {
@@ -16,9 +13,6 @@ export default function Destination() {
 
   const data = JSON['01 Destination'][1]
   const tabs = data.map(tab => tab.name)
-  const { name, description, travel, distance } = data[destiny]
-
-  const src = [Moon, Mars, Europa, Titan]
 
   return (
     <section className='destination'>
@@ -31,20 +25,20 @@ export default function Destination() {
         />
         <Article
           classH2='destination-title'
-          h2={name}
+          h2={data[destiny].name}
           classP='destination-description'
         >
-          {description}
+          {data[destiny].description}
         </Article>
         <footer className='footer-distance-time'>
-          <Footer span='Avg. Distance' strong={distance} />
-          <Footer span='Est. Travel Time' strong={travel} />
+          <Footer span='Avg. Distance' strong={data[destiny].distance} />
+          <Footer span='Est. Travel Time' strong={data[destiny].travel} />
         </footer>
       </aside>
       <Illustration
         classImg='destination-img'
-        src={src[destiny]}
-        alt={name}
+        src={SRC.Destination[destiny]}
+        alt={data[destiny].name}
       />
     </section>
   )

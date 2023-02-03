@@ -1,9 +1,7 @@
 import './header.css'
-import cross from '../../assets/shared/icon-close.svg'
-import hamburguer from '../../assets/shared/icon-hamburger.svg'
 import JSON from '../../data.json'
-import logo from '../../assets/shared/logo.svg'
 import NavTabs from '../NavTabs/NavTabs'
+import { SRC } from '../../sources'
 import { useState } from 'react'
 
 
@@ -19,10 +17,10 @@ export default function Header({ surf }) {
 
   return (
     <header className='header-main-nav'>
-      <img className='header-logo' src={logo} alt='logo-space-tourism' />
+      <img className='header-logo' src={SRC.Header[0]} alt='logo-space-tourism' />
       <div className='header-line'></div>
       <button onClick={() => setMenu(!menu)}>
-        <img className='mobile-menu-icon' src={menu ? cross : hamburguer} alt='menu' />
+        <img className='mobile-menu-icon' src={menu ? SRC.Header[1] : SRC.Header[2]} alt='menu' />
       </button>
       <NavTabs
         tabs={headerTabs}
