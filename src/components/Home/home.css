@@ -37,6 +37,7 @@
   font-family: var(--barlow);
   font-size: 1.1rem;
   font-weight: 400;
+  height: calc(2rem * 5);
   line-height: 2rem;
   width: 60%;
 }
@@ -64,7 +65,7 @@
   .home {
     align-items: center;
     flex-direction: column;
-    gap: 8rem 0;
+    gap: 7rem 0;
     width: 100vw;
   }
 
@@ -79,6 +80,7 @@
 
   .home-description {
     font-size: 1rem;
+    height: calc(1.8rem * 5);
     line-height: 1.8rem;
     width: 80%;
   }
@@ -91,7 +93,7 @@
 
 @media screen and (max-width: 425px) {
   .home {
-    gap: 4rem 0;
+    gap: 2rem 0;
   }
 
   .home article {

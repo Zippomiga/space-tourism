@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 768px) {
   .footer-distance-time {
-    padding: 1rem 0;
+    padding-top: 1rem;
     text-align: center;
   }
 }

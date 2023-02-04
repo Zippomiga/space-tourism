@@ -49,8 +49,8 @@
   font-family: var(--barlow);
   font-size: 1.1rem;
   font-weight: 400;
+  height: calc(2rem * 6);
   line-height: 2rem;
-  min-height: calc(2rem * 5);
   width: 90%;
 }
 
@@ -85,6 +85,7 @@
 
   .technology-description {
     font-size: 1rem;
+    height: calc(1.8rem * 5);
     line-height: 1.8rem;
     text-align: center;
     width: 70%;
@@ -114,9 +115,8 @@
   }
 
   .technology-description {
+    height: calc(1.6rem * 7);
     line-height: 1.6rem;
-    margin-bottom: 1rem;
-    min-height: calc(1.6rem * 6);
     width: 90%;
   }
 }

@@ -39,8 +39,8 @@
   font-family: var(--barlow);
   font-size: 1.1rem;
   font-weight: 400;
+  height: calc(2rem * 6);
   line-height: 2rem;
-  min-height: calc(2rem * 5);
   width: 70%;
 }
 
@@ -78,8 +78,8 @@
 
   .crew-description {
     font-size: 1rem;
+    height: calc(1.8rem * 5);
     line-height: 1.8rem;
-    min-height: calc(1.8rem * 4);
     width: 90%;
   }
 }
@@ -93,7 +93,7 @@
 
   .crew-info {
     flex-direction: column-reverse;
-    gap: 1rem 0;
+    gap: 1.5rem 0;
   }
 
   .crew-info article {
@@ -109,9 +109,8 @@
   }
 
   .crew-description {
+    height: calc(1.6rem * 7);
     line-height: 1.6rem;
-    margin-bottom: 2rem;
-    min-height: calc(1.6rem * 5);
     width: 100%;
   }
 
