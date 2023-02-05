@@ -19,9 +19,13 @@ import LaunchVehicle_L from './assets/technology/image-Launch-Vehicle-landscape.
 import Spaceport_L from './assets/technology/image-Spaceport-landscape.jpg'
 import SpaceCapsule_L from './assets/technology/image-Space-Capsule-landscape.jpg'
 
+import JSON from './data.json'
+
+export const getData = (topic) => JSON[topic][1]
 
 export const SRC = {
   Header: [
+    Object.keys(JSON),
     Logo,
     Cross,
     Hamburguer

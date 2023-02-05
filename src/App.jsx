@@ -10,14 +10,14 @@ import { useState } from 'react'
 
 
 export default function App() {
-  const [page, setPage] = useState('00 Home')
-  const [{ bg, subtitle }] = JSON[page]
+  const [topic, setTopic] = useState('00 Home')
+  const [{ bg, subtitle }] = JSON[topic]
 
   function surf(e) {
-    setPage(e.target.id)
+    setTopic(e.target.id)
   }
 
-  const screen = {
+  const page = {
     0: <Home surf={surf} />,
     1: <Destination />,
     2: <Crew />,
@@ -28,7 +28,7 @@ export default function App() {
     <main className={'bg ' + bg}>
       <Header surf={surf} />
       <Subtitle sub={subtitle} />
-      {screen[page.slice(1, 2)]}
+      {page[topic.slice(1, 2)]}
     </main>
   )
 }

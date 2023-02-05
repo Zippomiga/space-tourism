@@ -1,9 +1,8 @@
 import './technology.css'
 import Article from '../Article/Article'
 import Illustration from '../Illustrations/Illustration'
-import JSON from '../../data.json'
 import NavTabs from '../NavTabs/NavTabs'
-import { SRC } from '../../sources'
+import { getData, SRC } from '../../sources'
 import { useEffect, useState } from 'react'
 
 
@@ -11,7 +10,8 @@ export default function Technology() {
   const [tech, setTech] = useState(0)
   const [width, setWidth] = useState(screen.width)
 
-  const data = JSON['03 Technology'][1]
+  const data = getData('03 Technology')
+  const { name, description } = data[tech]
 
   useEffect(() => {
     window.addEventListener('resize', () => setWidth(screen.width))
@@ -30,16 +30,16 @@ export default function Technology() {
           classH4='technology-spoiler'
           h4='The terminology...'
           classH2='technology-ship'
-          h2={data[tech].name}
+          h2={name}
           classP='technology-description'
         >
-          {data[tech].description}
+          {description}
         </Article>
       </aside>
       <Illustration
         classImg='technology-img tablet-mobile'
         src={SRC.Technology[width > 768 ? 'portrait' : 'landscape'][tech]}
-        alt={data[tech].name}
+        alt={name}
       />
     </section>
   )

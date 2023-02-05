@@ -2,17 +2,17 @@ import './destination.css'
 import Article from '../Article/Article'
 import Footer from './Footer'
 import Illustration from '../Illustrations/Illustration'
-import JSON from '../../data.json'
 import NavTabs from '../NavTabs/NavTabs'
-import { SRC } from '../../sources'
+import { getData, SRC } from '../../sources'
 import { useState } from 'react'
 
 
 export default function Destination() {
   const [destiny, setDestiny] = useState(0)
 
-  const data = JSON['01 Destination'][1]
+  const data = getData('01 Destination')
   const tabs = data.map(tab => tab.name)
+  const { name, description, distance, travel } = data[destiny]
 
   return (
     <section className='destination'>
@@ -25,20 +25,20 @@ export default function Destination() {
         />
         <Article
           classH2='destination-title'
-          h2={data[destiny].name}
+          h2={name}
           classP='destination-description'
         >
-          {data[destiny].description}
+          {description}
         </Article>
         <footer className='footer-distance-time'>
-          <Footer span='Avg. Distance' strong={data[destiny].distance} />
-          <Footer span='Est. Travel Time' strong={data[destiny].travel} />
+          <Footer span='Avg. Distance' strong={distance} />
+          <Footer span='Est. Travel Time' strong={travel} />
         </footer>
       </aside>
       <Illustration
         classImg='destination-img'
         src={SRC.Destination[destiny]}
-        alt={data[destiny].name}
+        alt={name}
       />
     </section>
   )

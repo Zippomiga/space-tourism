@@ -1,10 +1,10 @@
 import './home.css'
 import Article from '../Article/Article'
-import JSON from '../../data.json'
+import { getData } from '../../sources'
 
 
 export default function Home({ surf }) {
-  const { name, intro, description } = JSON['00 Home'][1]
+  const { name, intro, description } = getData('00 Home')
 
   return (
     <section className='home' >

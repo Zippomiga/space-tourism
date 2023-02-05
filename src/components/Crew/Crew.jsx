@@ -1,29 +1,29 @@
 import './crew.css'
 import Article from '../Article/Article'
 import Illustration from '../Illustrations/Illustration'
-import JSON from '../../data.json'
 import NavTabs from '../NavTabs/NavTabs'
-import { SRC } from '../../sources'
+import { getData, SRC } from '../../sources'
 import { useState } from 'react'
 
 
 export default function Crew() {
   const [crew, setCrew] = useState(0)
 
-  const data = JSON['02 Crew'][1]
+  const data = getData('02 Crew')
   const tabs = data.map(tab => tab.name)
+  const { role, name, bio } = data[crew]
 
   return (
     <section className='crew'>
       <aside className='crew-info'>
         <Article
           classH4='crew-role'
-          h4={data[crew].role}
+          h4={role}
           classH2='crew-expert'
-          h2={data[crew].name}
+          h2={name}
           classP='crew-description'
         >
-          {data[crew].bio}
+          {bio}
         </Article>
         <NavTabs
           tabs={tabs}
@@ -35,7 +35,7 @@ export default function Crew() {
       <Illustration
         classImg='crew-img'
         src={SRC.Crew[crew]}
-        alt={data[crew].name}
+        alt={name}
       />
     </section>
   )
