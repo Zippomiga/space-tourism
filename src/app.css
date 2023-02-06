@@ -7,9 +7,6 @@
   --barlow: 'Barlow', sans-serif;
   --barlow-condesed: 'Barlow Condensed', sans-serif;
   --bellefair: 'Bellefair', serif;
-  --desktop-min-height: 900px;
-  --tablet-min-height: 1024px;
-  --mobile-min-height: 667px;
   --bg-gray: #ffffff0d;
   --darkblue: #0b0d17;
   --gray: #979797;
@@ -41,10 +38,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  gap: 4rem 0;
+  gap: 4rem;
   min-height: 100vh;
   padding: 2rem 0;
 }
+
 
 @media screen and (max-width: 768px) {
   .bg-home {
@@ -68,29 +66,14 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    gap: 2rem 0;
+    gap: 2rem;
     min-height: 100vh;
     padding-top: 0;
   }
 }
 
+
 @media screen and (max-width: 425px) {
-  .bg-home {
-    background: url(./assets/home/background-home-mobile.jpg);
-  }
-
-  .bg-destination {
-    background: url(./assets/destination/background-destination-mobile.jpg);
-  }
-
-  .bg-crew {
-    background: url(./assets/crew/background-crew-mobile.jpg);
-  }
-
-  .bg-technology {
-    background: url(./assets/technology/background-technology-mobile.jpg);
-  }
-
   .bg {
     background-attachment: fixed;
     background-position: center center;
