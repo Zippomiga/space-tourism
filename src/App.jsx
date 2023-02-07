@@ -17,12 +17,12 @@ export default function App() {
     setTopic(e.target.id)
   }
 
-  const page = {
-    0: <Home surf={surf} />,
-    1: <Destination />,
-    2: <Crew />,
-    3: <Technology />
-  }
+  const page = [
+    <Home surf={surf} />,
+    <Destination />,
+    <Crew />,
+    <Technology />
+  ]
 
   return (
     <main className={'bg ' + bg}>
